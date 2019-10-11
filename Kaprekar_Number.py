@@ -38,13 +38,6 @@ def kaprekarNumbers(p, q):
                 count+=1
     if(count == 0):
         print('INVALID RANGE')
-
-            
-            
-        
-
-
-            
             
 p = int(input())
 q = int(input())

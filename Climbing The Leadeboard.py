@@ -3,7 +3,7 @@
 
 # In[39]:
 
-
+import time;
 
 # Uncoment bwlow for Custom input
 # scores_count = int(input())
@@ -14,11 +14,19 @@
 
 # alice = list(map(int, input().rstrip().split()))
 
-scores_count=6
-scores=[100, 90, 90, 80, 75, 60]
-alice_count=5
-alice=[50, 65, 77, 90, 102]
+#scores_count=6
+#scores=[100, 90, 90, 80, 75, 60]
+#alice_count=5
+#alice=[50, 65, 77, 90, 102]
+f=open("/home/vamsik1211/git_repos/Hacker_rank_solutions/input06.txt","r")
 
+
+f.seek(0)
+scores_count=int(f.readline())
+scores=list(map(int, (f.readline()).rstrip().split()))
+alice_count=int(f.readline())
+alice=list(map(int, (f.readline()).rstrip().split()))
+start = time.time()
 def arrangeScoresRank(scores):
     rank_arrange=[scores[0]]
     for i in range(1,len(scores)):
@@ -44,7 +52,7 @@ def climbingLeaderboard(scores_singles, alice):
     return ranks_of_alice
 #print(climbingLeaderboard(scores_singles,alice))
 print('\n'.join(map(str, climbingLeaderboard(scores_singles,alice))))
-
+print(time.time() - start)
 
 # In[ ]:
 
